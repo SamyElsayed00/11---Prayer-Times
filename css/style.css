@@ -1,0 +1,112 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "DroidKufi", Arial, sans-serif;
+}
+
+.prayer-times {
+  max-width: 1400px;
+  margin: 30px auto;
+  position: relative;
+  background: linear-gradient(45deg, #330d46, #75358b);
+  background: -webkit-linear-gradient(45deg, #330d46, #75358b);
+  color: #fff;
+  padding: 20px;
+  border-radius: 15px; /* Add rounded corners */
+}
+
+.prayer-times::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: url(../imgs/ramadanPatternBG.png) top -20px right repeat;
+  background-size: 80px auto;
+  opacity: 0.2;
+  pointer-events: none;
+  border-radius: 15px; /* Keep the background pattern rounded */
+}
+
+.prayer-times .title {
+  font-size: 25px;
+  color: #fff;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  position: relative;
+  font-family: "DroidKufi", Arial, sans-serif;
+}
+
+.prayer-times .location-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.prayer-times .location-info .location > h2 {
+  font-size: 35px;
+  color: #fff;
+  margin-bottom: 15px;
+}
+
+.prayer-times .location-info .select-location {
+  width: 300px;
+}
+
+.prayer-times .location-info .select-location > select:first-of-type {
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 12px;
+}
+
+.prayer-times .location-info .select-location > select {
+  position: relative;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+  padding: 12px 24px;
+  border: none;
+  font-size: 16px;
+  color: #000;
+  outline: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.prayer-times .prayers {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+}
+
+.prayer-times .prayers .prayer-box {
+  text-align: center;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.prayer-times .prayers .prayer-box:nth-child(odd) {
+  opacity: 0.9;
+}
+
+.prayer-times .prayers .prayer-box > h3 {
+  background-color: #393e5e;
+  text-align: center;
+  font-size: 22px;
+  padding: 5px 10px;
+}
+
+.prayer-times .prayers .prayer-box .details {
+  background-color: #fff;
+  padding: 20px;
+}
+
+.prayer-times .prayers .prayer-box .details > p {
+  color: #333;
+  font-size: 23px;
+}
